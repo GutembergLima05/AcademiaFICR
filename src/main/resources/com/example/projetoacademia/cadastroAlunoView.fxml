@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetoacademia.controllers.AlunoController">
+   <children>
+      <Label layoutX="158.0" layoutY="6.0" text="Cadastro de Aluno">
+         <font>
+            <Font name="Arial" size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="37.0" layoutY="61.0" prefHeight="318.0" prefWidth="531.0" style="-fx-background-color: #1E1E2F; -fx-background-radius: 10px; -fx-border-color: red; -fx-border-radius: 10px;">
+         <children>
+            <Label layoutX="56.0" layoutY="46.0" text="Nome:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField" layoutX="104.0" layoutY="77.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="cpfField" layoutX="104.0" layoutY="109.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="nomeField" layoutX="104.0" layoutY="41.0" prefHeight="25.0" prefWidth="230.0" />
+            <Button fx:id="cancelarButton" layoutX="374.0" layoutY="274.0" mnemonicParsing="false" onAction="#cancelarAluno" text="Cancelar" />
+            <Button fx:id="cadastrarButton" layoutX="443.0" layoutY="274.0" mnemonicParsing="false" onAction="#cadastrarAluno" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: green;" text="Salvar" textFill="WHITE" />
+            <Label layoutX="57.0" layoutY="82.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="114.0" text="CPF:" textFill="#fffdfd">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="149.0" text="dtNasc:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dtNascPicker" layoutX="104.0" layoutY="144.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="telefoneField" layoutX="104.0" layoutY="187.0" prefHeight="25.0" prefWidth="230.0" />
+            <TextField fx:id="enderecoField" layoutX="104.0" layoutY="222.0" prefHeight="25.0" prefWidth="230.0" />
+            <Label layoutX="45.0" layoutY="192.0" text="Telefone:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="227.0" text="Endereço:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

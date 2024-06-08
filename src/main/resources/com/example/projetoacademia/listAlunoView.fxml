@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1179.0" style="-fx-background-color: #1E1E2F;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetoacademia.controllers.AlunoTableController">
+    <children>
+        <MenuBar prefHeight="26.0" prefWidth="772.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Projeto Academia">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#sairTable" text="Sair" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane prefHeight="422.0" prefWidth="737.0">
+            <children>
+                <TableView fx:id="tableView" layoutX="194.0" layoutY="134.0" prefHeight="392.0" prefWidth="943.0" style="-fx-background-color: #4d130f; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="36.0" style="-fx-text-fill: black; -fx-pref-height: 30px;" text="ID" />
+                        <TableColumn fx:id="nomeColumn" prefWidth="152.0" style="-fx-text-fill: black;" text="Nome" />
+                        <TableColumn fx:id="emailColumn" prefWidth="138.0" style="-fx-text-fill: black;" text="Email" />
+                        <TableColumn fx:id="cpfColumn" prefWidth="117.0" style="-fx-text-fill: black;" text="CPF" />
+                        <TableColumn fx:id="dtNascColumn" prefWidth="95.0" style="-fx-text-fill: black;" text="dtNasc" />
+                        <TableColumn fx:id="telefoneColumn" prefWidth="96.0" style="-fx-text-fill: black;" text="Telefone" />
+                        <TableColumn fx:id="enderecoColumn" prefWidth="103.0" style="-fx-text-fill: black;" text="Endereco" />
+                    </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+                </TableView>
+                <Label layoutX="194.0" layoutY="65.0" prefHeight="31.0" prefWidth="83.0" text="🔍 Procurar:" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="filterTextField" layoutX="194.0" layoutY="96.0" prefHeight="31.0" prefWidth="194.0" promptText="Digite para filtrar">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></TextField>
+            <Button fx:id="cadastrarAluno" layoutX="1008.0" layoutY="96.0" mnemonicParsing="false" onAction="#handleCadastrarAluno" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #008000;" text="Cadastrar Novo +" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
